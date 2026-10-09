@@ -38,6 +38,6 @@ PhysX 核心物理 SDK 与宿主渲染不是同一层：raycast/overlap 等几�
 
 GPU 路径的构建条件、形状和 articulation 支持、数据传输与回调限制需逐版本核对。先解释 native API 和宿主适配边界，再介绍上层机器人生态；本阶段不编译 SDK 或做性能/接触实验。
 
-自查：能否正确区分三个版本身份，画出 actor/shape/scene 关系，说明 simulate/fetchResults 的访问限制，并找到实际 solver 的选择点？剩余专题见[课程路线](curriculum.md)。
+自查：能否正确区分三个版本身份，画出 actor/shape/scene 关系，说明 simulate/fetchResults 的访问限制，并找到实际 solver 的选择点？建模与时间的深入课已在 [E1](modeling-state-time.md) 展开；剩余专题见[课程路线](curriculum.md)。
 
 实验最终复用 [DexLab](https://github.com/huangkiki/Dexlab) 并保留原版本、配置和工况；当前不另建实验批次或评分器。

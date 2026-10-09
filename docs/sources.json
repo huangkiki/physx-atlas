@@ -50,6 +50,114 @@
     {
       "path": "physx/documentation/fetchcontent/FetchContent.md",
       "git_blob": "0856feef21ca3e1492c5eb49c7925a00f58f8a5b"
+    },
+    {
+      "path": "physx/include/PxPhysics.h",
+      "git_blob": "46dafb612ea7a96c2603d9295232390f21259b7f"
+    },
+    {
+      "path": "physx/include/PxShape.h",
+      "git_blob": "91d7f32f4b922087bd2fd3cbcee32d0f8bfa4729"
+    },
+    {
+      "path": "physx/include/PxRigidActor.h",
+      "git_blob": "1dd54f99c0031c27ef76a94fa995c72b6cc94c51"
+    },
+    {
+      "path": "physx/include/PxArticulationJointReducedCoordinate.h",
+      "git_blob": "45671a0ce4240aaa8484016da7929e0d8dcc22e8"
+    },
+    {
+      "path": "physx/include/PxArticulationLink.h",
+      "git_blob": "84a11d8877d7562486204c02325f08ec477753f3"
+    },
+    {
+      "path": "physx/include/PxArticulationFlag.h",
+      "git_blob": "344455a20fa858a1db6aafaefcede9f870e2b902"
+    },
+    {
+      "path": "physx/include/common/PxTolerancesScale.h",
+      "git_blob": "d8ea966cf2a05a01bd6b8dba2b382214f73f3f1e"
+    },
+    {
+      "path": "physx/include/foundation/PxTransform.h",
+      "git_blob": "c6867bf9b422b3d63660b65d0cd7e0e5ab7b1570"
+    },
+    {
+      "path": "physx/include/foundation/PxQuat.h",
+      "git_blob": "f2ce377e149e5c09143b36e0ad2f558a53115223"
+    },
+    {
+      "path": "physx/include/extensions/PxRigidBodyExt.h",
+      "git_blob": "3a4f784bcef0a06e4d8506d28c56c5d1c923c420"
+    },
+    {
+      "path": "physx/include/extensions/PxSerialization.h",
+      "git_blob": "44450ba3a8509defe3a88c83e8921c9d336f4cc5"
+    },
+    {
+      "path": "physx/include/cooking/PxCooking.h",
+      "git_blob": "fa103a02f90afa1bf59faf0c305fc7cbb8a3a992"
+    },
+    {
+      "path": "physx/include/geometry/PxBoxGeometry.h",
+      "git_blob": "707ff37fb9cd6dff9b967ec18a5ff83e79b54a4d"
+    },
+    {
+      "path": "physx/include/geometry/PxTriangleMeshGeometry.h",
+      "git_blob": "50025ce296be3be80654c14f373eaf08ccbe6487"
+    },
+    {
+      "path": "physx/include/geometry/PxConvexMeshGeometry.h",
+      "git_blob": "79fb8b641f21e3e55ef8ba3bc674f931fed18e41"
+    },
+    {
+      "path": "physx/source/physxextensions/src/ExtRigidBodyExt.cpp",
+      "git_blob": "8993ecc254edef3211786e44f69d0334a0d1d75f"
+    },
+    {
+      "path": "physx/source/physx/src/NpRigidDynamic.cpp",
+      "git_blob": "14a500845f14e1798eebaf44a41675c7c945ed1c"
+    },
+    {
+      "path": "physx/source/physx/src/NpArticulationReducedCoordinate.cpp",
+      "git_blob": "b68bf551e8efe3e5ec3c471afe1209b8509a6ade"
+    },
+    {
+      "path": "physx/include/geometry/PxCapsuleGeometry.h",
+      "git_blob": "a7f6c59da0b17c6d44f40fdae08cb19678ad5a88"
+    },
+    {
+      "path": "physx/include/foundation/PxSimpleTypes.h",
+      "git_blob": "9c0c415a375812ebf570e6ce48ba4525f7790a7b"
+    },
+    {
+      "path": "physx/include/geometry/PxMeshScale.h",
+      "git_blob": "69a6933ae536de70345dd9600a8745a6f7c5d39c"
+    },
+    {
+      "path": "physx/source/physx/src/NpSceneFetchResults.cpp",
+      "git_blob": "267d2e5514f3f4d7555abfa960c01f338783ffdd"
+    },
+    {
+      "path": "physx/include/solver/PxSolverDefs.h",
+      "git_blob": "7c9083439023b40ac1d1f5cb9b37dee5714f674c"
+    },
+    {
+      "path": "physx/source/physx/src/NpRigidActorTemplate.h",
+      "git_blob": "d49588b3e0ddcbed7b82c1fef24de3f54d93a59d"
+    },
+    {
+      "path": "physx/source/physx/src/NpShape.cpp",
+      "git_blob": "2386d984e4ebd8bd525ec940b99008174393608d"
+    },
+    {
+      "path": "physx/snippets/snippetsdf/SnippetSDF.cpp",
+      "git_blob": "21ae5b356c7289d0c742ebd0cb787ab46dcceb50"
+    },
+    {
+      "path": "physx/source/physx/src/NpShapeManager.cpp",
+      "git_blob": "def55a4226834db2852c8b3ce13606d0efa81087"
     }
   ]
 }
