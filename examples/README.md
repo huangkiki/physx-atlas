@@ -7,3 +7,5 @@
 [E2：驱动与机器人](e2_control_robotics.cpp) 对应[控制专题](../docs/control-robotics.md)：平移关节配置、target/持久 effort、工具 FK 与 Jacobian 行映射。候选参数未作运行验证；源码/编译检查见 [E2 记录](../docs/validation/e2.md)。
 
 [E3：接触报告复制](e3_contact_readback.cpp) 对应[接触、求解器与力观测](../docs/contact-solvers.md)。分别保留法向点、切向 anchor、事件与可用性，示范关于 world 参考点的已报告点冲量矩；不宣称完整 wrench，不聚合 CCD。无 `main`、无链接/运行；[E3 检查记录](../docs/validation/e3.md)注明语法/类型检查边界。
+
+[E4：单束 scene query](e4_scene_query.cpp) 对应[传感、场景查询与调试显示](../docs/sensors-rendering.md)：原生 preFilter 排除提供的自身 actors，选择最近 BLOCK，检查有效位并复制数值；调用方负责一致的 pose/场景采样边界和 query mask。无 `main`、无 SDK 链接/运行，不是 RGB 或 LiDAR 产品。[E4 检查记录](../docs/validation/e4.md)列出固定头文件语法/类型检查与未执行范围。

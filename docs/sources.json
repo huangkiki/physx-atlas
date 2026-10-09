@@ -318,6 +318,102 @@
     {
       "path": "physx/source/simulationcontroller/src/ScPipeline.cpp",
       "git_blob": "68aa23b2c5630b3b557b8e2d8bb336f1d188aff8"
+    },
+    {
+      "path": "physx/include/PxQueryFiltering.h",
+      "git_blob": "cb060053c4fe317ce10a8e48827dbeea92641ca0"
+    },
+    {
+      "path": "physx/include/PxQueryReport.h",
+      "git_blob": "3d685c3231adb8172c195d2ec77d0304e83167c0"
+    },
+    {
+      "path": "physx/include/PxSceneQuerySystem.h",
+      "git_blob": "add17d4f8a276377b59e3d0ac5e4d2a8ab200954"
+    },
+    {
+      "path": "physx/include/PxSceneQueryDesc.h",
+      "git_blob": "9d3d46b90de3295616ae4837d411050b1a12798a"
+    },
+    {
+      "path": "physx/include/PxVisualizationParameter.h",
+      "git_blob": "114bf119f966d4b2156643b99630d42a2c9e5aa7"
+    },
+    {
+      "path": "physx/include/common/PxRenderBuffer.h",
+      "git_blob": "c71e67b2f4b47dcfbe4962d1ca6cac7299412f17"
+    },
+    {
+      "path": "physx/include/geometry/PxGeometryQuery.h",
+      "git_blob": "8f6b5b4aa26e12fcdcefbaace217052a4315fd7b"
+    },
+    {
+      "path": "physx/include/omnipvd/PxOmniPvd.h",
+      "git_blob": "13a568c3709edd88638324e172338dea8821155b"
+    },
+    {
+      "path": "physx/include/pvd/PxPvd.h",
+      "git_blob": "ecae1159125fe08509213fa8d6de92075898e657"
+    },
+    {
+      "path": "physx/include/pvd/PxPvdSceneClient.h",
+      "git_blob": "d16a86c526b3bbbb53f6d98d461a78ac0e73b301"
+    },
+    {
+      "path": "physx/source/physx/src/NpSceneQueries.cpp",
+      "git_blob": "1cbdb4939ba6bf901e998f3cfe5bcef58ee56f1e"
+    },
+    {
+      "path": "physx/snippets/snippetrender/SnippetRender.cpp",
+      "git_blob": "b2b9215f04dfc0285cda9a4710b94ad40e4820d7"
+    },
+    {
+      "path": "physx/snippets/snippetrender/SnippetCamera.cpp",
+      "git_blob": "cfe61095158305ddfe7c7754bae8545d9dc9a308"
+    },
+    {
+      "path": "physx/include/geometry/PxGeometryHit.h",
+      "git_blob": "3d76453934a5f4ae02c5165a6c16e877d4d4895d"
+    },
+    {
+      "path": "physx/source/scenequery/src/SqQuery.cpp",
+      "git_blob": "e8d138bf4cec04450e0cdf1a5157c0221b3ced83"
+    },
+    {
+      "path": "physx/source/scenequery/src/SqManager.cpp",
+      "git_blob": "833abaa7f4b94a03e79dc94297cd892e96bba8e1"
+    },
+    {
+      "path": "physx/snippets/snippetquerysystemallqueries/SnippetQuerySystemAllQueries.cpp",
+      "git_blob": "e1839b9b4ab42508bc4cea46c4e71191acbed3ae"
+    },
+    {
+      "path": "physx/snippets/snippetomnipvd/SnippetOmniPvd.cpp",
+      "git_blob": "bd75bcbb1b4906b346764b31880693d72c6f7aa8"
+    },
+    {
+      "path": "physx/source/physx/src/omnipvd/NpOmniPvd.cpp",
+      "git_blob": "4074fac517a7474f8fe0da5927b492dbfd78e545"
+    },
+    {
+      "path": "physx/include/pvd/PxPvdTransport.h",
+      "git_blob": "c5f0250b5f630ca17336dc8aa58b2e2cb46fa86f"
+    },
+    {
+      "path": "physx/source/simulationcontroller/src/ScVisualize.cpp",
+      "git_blob": "5ca20acd55012808ccc49c542085384833e91259"
+    },
+    {
+      "path": "physx/source/physx/src/NpScene.h",
+      "git_blob": "a53ad7cc1b37d9f8de9c96a704d910e94cc33da1"
+    },
+    {
+      "path": "physx/include/PxSceneLock.h",
+      "git_blob": "6459e39a48e25da58f454e70e118f8ea5e7570b7"
+    },
+    {
+      "path": "physx/source/physx/src/NpDebugViz.cpp",
+      "git_blob": "39970f7d220e20533fb6c35ec46c4696edfbffb4"
     }
   ]
 }

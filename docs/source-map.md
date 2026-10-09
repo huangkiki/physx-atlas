@@ -106,3 +106,34 @@
 | [physx/source/simulationcontroller/src/ScConstraintCore.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/simulationcontroller/src/ScConstraintCore.cpp) | 普通 joint constraint force 的 core/simulation 转发边界 |
 | [physx/source/lowlevel/software/src/PxsNphaseImplementationContext.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/lowlevel/software/src/PxsNphaseImplementationContext.cpp) | CPU PCM/普通 narrow phase 的配置分支 |
 | [physx/source/simulationcontroller/src/ScPipeline.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/simulationcontroller/src/ScPipeline.cpp) | simulate/collide/advance、岛/solver/积分/CCD 任务依赖 |
+
+## E4 增补阅读入口
+
+[传感、查询与调试显示](sensors-rendering.md)给出固定行号和责任边界；继续复用 E1–E3 的 scene、rigid body、articulation 和 fetch 源码。来源身份收录 [sources.json](sources.json)，不因接口或 snippet 存在而宣称运行验收。
+
+| 源码文件 | 阅读目的 |
+|---|---|
+| [physx/include/PxQueryFiltering.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxQueryFiltering.h) | 静/动态与 hardcoded mask、pre/post filter、TOUCH/BLOCK/ANY/NO_BLOCK |
+| [physx/include/PxQueryReport.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxQueryReport.h) | hit callback/buffer、容量截断与 query cache 生命周期 |
+| [physx/include/PxSceneQuerySystem.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxSceneQuerySystem.h) | ray/sweep/overlap 契约、flush、独立 query system 与异步更新 |
+| [physx/include/PxSceneQueryDesc.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxSceneQueryDesc.h) | pruner 与 build/commit 更新模式、新对象可见性取舍 |
+| [physx/include/PxVisualizationParameter.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxVisualizationParameter.h) | master/对象可视化开关、scaled impulse 和 deprecated force 别名 |
+| [physx/include/common/PxRenderBuffer.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/common/PxRenderBuffer.h) | world 调试点/线/三角形与借用数组，非 framebuffer |
+| [physx/include/geometry/PxGeometryQuery.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/geometry/PxGeometryQuery.h) | 给定 geometry/pose 的查询，与 scene 发现/filter 责任分开 |
+| [physx/include/omnipvd/PxOmniPvd.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/omnipvd/PxOmniPvd.h) | OVD 集成版本、writer 所有权/并发、采样与 stream/transport 生命周期 |
+| [physx/include/pvd/PxPvd.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/pvd/PxPvd.h) | 调试 instrumentation、连接与 cached 状态 |
+| [physx/include/pvd/PxPvdSceneClient.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/pvd/PxPvdSceneClient.h) | 调试 stream 开关、PVD viewer camera 与图元 |
+| [physx/source/physx/src/NpSceneQueries.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/NpSceneQueries.cpp) | scene 查询转发、读写检查、manual update/fetch 的配对 |
+| [physx/snippets/snippetrender/SnippetRender.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/snippets/snippetrender/SnippetRender.cpp) | GLUT/OpenGL 显示、投影与 swap 的示例应用职责 |
+| [physx/snippets/snippetrender/SnippetCamera.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/snippets/snippetrender/SnippetCamera.cpp) | 官方示例相机的坐标约定；不当作原生传感器 |
+| [physx/include/geometry/PxGeometryHit.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/geometry/PxGeometryHit.h) | 位置/法向/UV 有效位、face index、重叠与 distance |
+| [physx/source/scenequery/src/SqQuery.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/scenequery/src/SqQuery.cpp) | 实际 mask/default hit type/ANY/cache 路径和输入检查 |
+| [physx/source/scenequery/src/SqManager.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/scenequery/src/SqManager.cpp) | 脏数据 flush、锁、shape 更新与 pruner commit |
+| [physx/snippets/snippetquerysystemallqueries/SnippetQuerySystemAllQueries.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/snippets/snippetquerysystemallqueries/SnippetQuerySystemAllQueries.cpp) | 独立 query system 的示例组织；不执行 |
+| [physx/snippets/snippetomnipvd/SnippetOmniPvd.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/snippets/snippetomnipvd/SnippetOmniPvd.cpp) | writer/stream 与 Physics 连接、窗口/非窗口应用分支；不执行 |
+| [physx/source/physx/src/omnipvd/NpOmniPvd.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/omnipvd/NpOmniPvd.cpp) | 编译支持、writer 获取、startSampling 快照与 callback 顺序 |
+| [physx/include/pvd/PxPvdTransport.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/pvd/PxPvdTransport.h) | 默认 socket/file transport 工厂边界 |
+| [physx/source/simulationcontroller/src/ScVisualize.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/simulationcontroller/src/ScVisualize.cpp) | 接触图元、impulse 缩放与 sleeping pair 缺项 |
+| [physx/source/physx/src/NpScene.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/NpScene.h) | scene 持有的 render/query/acceleration 数据与内部辅助入口 |
+| [physx/include/PxSceneLock.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxSceneLock.h) | 原生 scene read/write RAII，不代替物理完成事件 |
+| [physx/source/physx/src/NpDebugViz.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/NpDebugViz.cpp) | 清空并重建对象调试图元的实际阶段 |
