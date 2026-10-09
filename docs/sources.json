@@ -506,6 +506,238 @@
     {
       "path": "physx/source/physxextensions/src/serialization/Binary/SnBinaryDeserialization.cpp",
       "git_blob": "891dacd641b6258d19898ab2f9f64116a367165a"
+    },
+    {
+      "path": "physx/include/PxConstraintDesc.h",
+      "git_blob": "c8b7eaa143c464797a423ecee8c2874527c55291"
+    },
+    {
+      "path": "physx/include/extensions/PxConstraintExt.h",
+      "git_blob": "c22c4040a952531d7d53a891d2c9660a63d3b411"
+    },
+    {
+      "path": "physx/include/geometry/PxCustomGeometry.h",
+      "git_blob": "6751860c2baded0b179ea61684102583d09ee2d4"
+    },
+    {
+      "path": "physx/include/extensions/PxCustomGeometryExt.h",
+      "git_blob": "6111110d67a4f35d58860bfce960bd0acbd6c9bb"
+    },
+    {
+      "path": "physx/include/extensions/PxDistanceJoint.h",
+      "git_blob": "6ecbeee88c981be3de7c30b832b1eac55228966b"
+    },
+    {
+      "path": "physx/source/physxextensions/src/ExtDistanceJoint.cpp",
+      "git_blob": "804de32ae4f13bb15ee31626e65ab87f15b75f7e"
+    },
+    {
+      "path": "physx/source/physxextensions/src/ExtDistanceJoint.h",
+      "git_blob": "bc6b8f5f9f9cc66376e9ccee384f224803d1481e"
+    },
+    {
+      "path": "physx/source/physxextensions/src/ExtCustomGeometryExt.cpp",
+      "git_blob": "31aaacd0968eb91dccbdfcea303add1e9d0bf2e3"
+    },
+    {
+      "path": "physx/source/geomutils/src/contact/GuContactCustomGeometry.cpp",
+      "git_blob": "ee9f959e0ce875c31589593a7fcd2ea263302448"
+    },
+    {
+      "path": "physx/source/geomutils/src/pcm/GuPCMContactCustomGeometry.cpp",
+      "git_blob": "79fedee6d5b28371b4e3885ee201dd8c222665fd"
+    },
+    {
+      "path": "physx/include/PxDeformableVolume.h",
+      "git_blob": "9eabd9461fc79bea95de98043a20b99dbeabc463"
+    },
+    {
+      "path": "physx/include/PxDeformableSurface.h",
+      "git_blob": "3cd3b60c87c58feb17fa18f0bf147f3a7a07a677"
+    },
+    {
+      "path": "physx/include/PxDeformableBody.h",
+      "git_blob": "72a4a2a905cb7366adb3138a542263074b5fff22"
+    },
+    {
+      "path": "physx/include/PxDeformableVolumeMaterial.h",
+      "git_blob": "f09cb1d8a984351c2d27f4e3f4e7b17268203b85"
+    },
+    {
+      "path": "physx/include/PxDeformableSurfaceMaterial.h",
+      "git_blob": "ed765ccfcd3fcc4c3e5790ed0992dac3e40b715e"
+    },
+    {
+      "path": "physx/include/PxPBDParticleSystem.h",
+      "git_blob": "52e7c72034ae4587c4a5ec94d28846da70276bad"
+    },
+    {
+      "path": "physx/include/PxParticleSystem.h",
+      "git_blob": "a9f3166d6de3e6b61fbe3bac8cb0372fc703d51a"
+    },
+    {
+      "path": "physx/include/PxPBDMaterial.h",
+      "git_blob": "00dda5edf5b83c8ce3f55ab72825a937e5242c03"
+    },
+    {
+      "path": "physx/include/PxParticleBuffer.h",
+      "git_blob": "fb293112f9ed9d650aac66f9181db3ce05655a94"
+    },
+    {
+      "path": "physx/include/PxDeformableAttachment.h",
+      "git_blob": "479e62a84f4c2709b21efc2a5185d22e19eb809f"
+    },
+    {
+      "path": "physx/source/physxgpu/src/PxgPhysXGpu.cpp",
+      "git_blob": "e3b9773fcd6cad74012ad73158c8633b30d87acc"
+    },
+    {
+      "path": "physx/source/compiler/cmakegpu/PhysXGpuDependencies.cmake",
+      "git_blob": "59b4af913558190bad53102e19d3cc3d7188aeb5"
+    },
+    {
+      "path": "physx/source/compiler/cmakegpu/PhysXGpu.cmake",
+      "git_blob": "d44a8f63232102c99830ac996d3e115dce7086f2"
+    },
+    {
+      "path": "physx/source/physx/src/gpu/PxPhysXGpuModuleLoader.cpp",
+      "git_blob": "203533ca53b2480153b16a783a9fc29f3a136fa6"
+    },
+    {
+      "path": "physx/source/gpusolver/src/CUDA/solver.cu",
+      "git_blob": "96c8c8a50f9d0bbb4a4f41fbebac4c50f16f9ec4"
+    },
+    {
+      "path": "physx/source/gpusolver/src/CUDA/solverMultiBlockTGS.cu",
+      "git_blob": "28af3d0363b1dfef5ccdff0fcd149804ea61edf3"
+    },
+    {
+      "path": "physx/source/gpusimulationcontroller/src/CUDA/softBody.cu",
+      "git_blob": "2d9e1ef296ecfb75cf763cb999d4cf26b570cc59"
+    },
+    {
+      "path": "physx/source/gpusimulationcontroller/src/CUDA/softBodyGM.cu",
+      "git_blob": "2ea041094e3227d56023dbc13816e715bc712d49"
+    },
+    {
+      "path": "physx/source/gpusimulationcontroller/src/CUDA/FEMClothConstraintPrep.cu",
+      "git_blob": "db59bffa4dd93bc3de226ce906139d58fd8a29d3"
+    },
+    {
+      "path": "physx/source/gpusimulationcontroller/src/CUDA/particlesystem.cu",
+      "git_blob": "6762f349c22e40b551eee91f1527ded6422c0067"
+    },
+    {
+      "path": "physx/source/gpuarticulation/src/CUDA/forwardDynamic2.cu",
+      "git_blob": "184dc0c55ccc7f79fa197c38c63ecd34f7610894"
+    },
+    {
+      "path": "physx/source/gpusimulationcontroller/src/PxgSoftBodyCore.cpp",
+      "git_blob": "763370e83084ffa823eb7de0cae63a1ca47a8e66"
+    },
+    {
+      "path": "physx/include/PxDeformableMaterial.h",
+      "git_blob": "9d99f82d6b22fb8fc3cfafe3ce7947c603b1f4fc"
+    },
+    {
+      "path": "physx/include/PxParticleGpu.h",
+      "git_blob": "d2395a8e7d74cb4ab6d7e7f0da7d888ac7668808"
+    },
+    {
+      "path": "physx/source/physx/src/NpDeformableVolume.cpp",
+      "git_blob": "8d974e65641a55a2d4c66fc238e7a409646d2314"
+    },
+    {
+      "path": "physx/source/physx/src/NpPBDParticleSystem.cpp",
+      "git_blob": "e24b02437feb2d48d51c5c68101dc8678dfac068"
+    },
+    {
+      "path": "physx/source/physxextensions/src/ExtJoint.h",
+      "git_blob": "6c98a3c8fff35bbd5ffa2b3f2586a1499c571228"
+    },
+    {
+      "path": "physx/source/physxextensions/src/ExtConstraintHelper.h",
+      "git_blob": "c642ce17b71e2d94dd94b90f5bba3724e8a2fa5a"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DyConstraintSetup.cpp",
+      "git_blob": "8a3cc957ed461d387c300625d7bdf96d9df1637a"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/shared/DyCpuGpu1dConstraint.h",
+      "git_blob": "008f6a6e323739d883d3ca4c470b7c53aea3c56e"
+    },
+    {
+      "path": "physx/source/simulationcontroller/src/ScConstraintSim.cpp",
+      "git_blob": "0eb91ec3000e183625957b4412bd638a0bebedde"
+    },
+    {
+      "path": "physx/source/gpunarrowphase/src/PxgNphaseImplementationContext.cpp",
+      "git_blob": "bd9ab455be002099033af9750443baf76c9105e7"
+    },
+    {
+      "path": "physx/source/gpunarrowphase/src/PxgShapeManager.cpp",
+      "git_blob": "3cbf76c3a0d4018a3f26cd04a3b66479f828e3f9"
+    },
+    {
+      "path": "physx/include/PxParticleSystemFlag.h",
+      "git_blob": "dd7ee4e91506f9c1d5dc0c5d1982323a4f6f0c0c"
+    },
+    {
+      "path": "physx/source/compiler/cmakegpu/linux/PhysXGpu.cmake",
+      "git_blob": "fe841df89f8baf2f4b83dabd51f58e1a0612b1f4"
+    },
+    {
+      "path": "physx/source/gpusimulationcontroller/src/CUDA/FEMCloth.cu",
+      "git_blob": "655e99f83493ec32e2c3338fe4fb8c9280920bce"
+    },
+    {
+      "path": "physx/include/PxImmediateMode.h",
+      "git_blob": "1684d2b10a8ff252e198e5204292719a82a87a7a"
+    },
+    {
+      "path": "physx/include/characterkinematic/PxController.h",
+      "git_blob": "324ebcda5248534c693d9076dd5db679d7afb7ed"
+    },
+    {
+      "path": "physx/include/vehicle/PxVehicleComponentSequence.h",
+      "git_blob": "a5feb073e4b2e0b4902cc97172ae534486190c54"
+    },
+    {
+      "path": "physx/include/geometry/PxConvexCoreGeometry.h",
+      "git_blob": "672b2672a36bd270c3e5acf4344645fe5b240b58"
+    },
+    {
+      "path": "physx/source/gpusimulationcontroller/src/CUDA/FEMClothUtil.cuh",
+      "git_blob": "39ad6033d7be5f5a1d3b8eb3946e22f35f6c652f"
+    },
+    {
+      "path": "physx/source/lowlevelaabb/src/BpFiltering.cpp",
+      "git_blob": "ca2c02f84d7ea09d32da5501568b0e038345d6bb"
+    },
+    {
+      "path": "physx/source/gpusimulationcontroller/src/CUDA/deformableUtils.cuh",
+      "git_blob": "e3c72f5e4691c9f12acbb4a5007af6731b3630b1"
+    },
+    {
+      "path": "physx/source/lowlevelaabb/include/BpFiltering.h",
+      "git_blob": "ae36b2e4f2937e7038e237bb2cdfc26346cd5bc7"
+    },
+    {
+      "path": "physx/source/gpusolver/src/PxgDynamicsContext.cpp",
+      "git_blob": "0d3bfe693427538f9b6fe05135a44c6ce077bda8"
+    },
+    {
+      "path": "physx/source/gpusolver/src/PxgTGSDynamicsContext.cpp",
+      "git_blob": "6ed0f761b0aea2de1b3f1385f6546bff647623d9"
+    },
+    {
+      "path": "physx/source/gpusolver/src/CUDA/solverMultiBlock.cu",
+      "git_blob": "6c6a234bcf19928f7f8ed0d0384449fbe0279cbb"
+    },
+    {
+      "path": "physx/include/extensions/PxMassProperties.h",
+      "git_blob": "0e235392978c38750f552222c72858f0df4034d9"
     }
   ],
   "external_references": [

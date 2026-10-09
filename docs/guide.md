@@ -1,6 +1,6 @@
 # PhysX 从 C++ SDK 到求解器
 
-阅读基线：`da950a3537927784951853c66618036f332ca0ce`，来源为官方固定源码。本篇是对象与关键机制导读，完整专题仍在开发；本轮仅做源码/文档核对，没有运行仿真实验。
+阅读基线：`da950a3537927784951853c66618036f332ca0ce`，来源为官方固定源码。本篇是对象与关键机制导读，E1–E6 源码专题已展开；A0 安装与 E7 全路线审校仍待完成。交付只做源码/文档和片段语法核对，没有运行 SDK 或仿真实验。
 
 ## 1. 三个版本身份
 
@@ -26,7 +26,7 @@
 
 [DyDynamics](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/lowleveldynamics/src/DyDynamics.cpp) 与 [DyTGSDynamics](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/lowleveldynamics/src/DyTGSDynamics.cpp) 提供不同执行入口。position/velocity iterations、关节/接触约束、warm start、摩擦及接触偏移需拆开理解。算法的迭代次数不能直接和另一个引擎的非线性迭代次数比较。
 
-材料摩擦组合、恢复系数、接触生成、接触/静止偏移和求解器是不同环节，后续接触专题会沿原生声明与分支逐项展开。本篇不从 SDK 导读推出已完成历史接触实验溯源。
+材料摩擦组合、恢复系数、接触生成、接触/静止偏移和求解器是不同环节，[E3 接触专题](contact-solvers.md)已沿原生声明与分支展开。本篇不从 SDK 导读推出已完成历史接触实验溯源。
 
 ## 5. 机器人、传感器与宿主
 
@@ -36,8 +36,8 @@ PhysX 核心物理 SDK 与宿主渲染不是同一层：raycast/overlap 等几�
 
 ## 6. GPU、扩展与阅读练习
 
-GPU 路径的构建条件、形状和 articulation 支持、数据传输与回调限制需逐版本核对。先解释 native API 和宿主适配边界，再介绍上层机器人生态；本阶段不编译 SDK 或做性能/接触实验。
+[E5](batch-learning-data.md)解释 GPU/Direct GPU 的数据、初始化与同步，[E6](extensions-boundaries.md)继续解释公开 CUDA 实现、CPU fallback、自定义几何/约束/回调以及 FEM/PBD 状态和数值边界。源码中的 Jacobian 或 GPU arrays 不自动构成端到端可微仿真接口；原生能力与宿主职责分别归属。本阶段不构建/运行 SDK，不做性能或接触实验。
 
-自查：能否正确区分三个版本身份，画出 actor/shape/scene 关系，说明 simulate/fetchResults 的访问限制，并找到实际 solver 的选择点？建模与时间的深入课已在 [E1](modeling-state-time.md) 展开，驱动、机器人与任务调度见 [E2](control-robotics.md)；剩余专题见[课程路线](curriculum.md)。
+自查：能否正确区分三个版本身份，画出 actor/shape/scene 关系，说明 simulate/fetchResults 的访问限制，并找到实际 solver 的选择点？建模与时间的深入课已在 [E1](modeling-state-time.md) 展开，驱动、机器人与任务调度见 [E2](control-robotics.md)；[E3](contact-solvers.md)贯通接触/求解/力读回，[E4](sensors-rendering.md)解释传感与显示，[E5](batch-learning-data.md)组织学习与数据，[E6](extensions-boundaries.md)连接扩展和综合源码追踪。完整先修与剩余 A0/E7 见[课程路线](curriculum.md)。
 
 实验最终复用 [DexLab](https://github.com/huangkiki/Dexlab) 并保留原版本、配置和工况；当前不另建实验批次或评分器。

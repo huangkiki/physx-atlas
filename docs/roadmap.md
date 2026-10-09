@@ -10,8 +10,8 @@
 | E3 | 接触、求解器与力观测源码专题 | E1 | [源码课程已交付](contact-solvers.md)，[检查与限制](validation/e3.md) |
 | E4 | 传感器、渲染与可视化专题 | E1 | [源码课程已交付](sensors-rendering.md)，[检查与限制](validation/e4.md) |
 | E5 | 批量、学习接口与数据专题 | E2、E4 | [源码课程已交付](batch-learning-data.md)，[检查与限制](validation/e5.md) |
-| E6 | 引擎特色、扩展与能力边界专题 | E3 | 待开发 |
-| E7 | 双路线课程审校与 DexLab 复用入口 | E2–E6 | 待开发 |
+| E6 | 引擎特色、扩展与能力边界专题 | E3 | [源码课程已交付](extensions-boundaries.md)，[检查与限制](validation/e6.md) |
+| E7 | A0 安装专题、双路线课程审校与 DexLab 复用入口 | E2–E6 | 待开发 |
 
 E0 交付的是导读与导航，不是所有专题。E1–E6 逐个展开目录中的知识点，E7 按完整课程契约审校。依赖必须以实际文档或合入提交核实，不能仅凭 Issue 关闭。
 
@@ -48,3 +48,9 @@ E2/E4 均实际合入后，下一项可领取 E5 批量、学习接口与数据�
 E5 贯通 A8/A9 与 B6 的调度/数据/扩展入口：独立 Scene 与同 Scene 批量的四类隔离、任务和完成边界、Direct GPU 的首步初始化/事件/scene-wide stride、CPU/GPU reset、随机化/确定性、学习宿主职责和记录/序列化/回放。特别保留了 GPU 读回 joint force 为输入值、UPDATE_KINEMATIC 清观测输出，以及容器 release 不释放反序列化对象/backing memory 的边界。
 
 下一项建议 E6：在已实际合入的 E3 基础上解释 GPU 内核/后端、特色几何与自定义扩展的实现和能力限制，不把 E5 数据接口存在当作全后端运行证明。E7 再统一课程与 DexLab 证据入口。领取前仍核实 main、Issue/PR 和依赖；本记录不自动开始下一项。没有新训练、物理实验、性能数字或 sim-to-real 验收。
+
+## E6 复盘与下一步
+
+E6 完成 B6/B7 的原生扩展和综合源码课：custom geometry 的碰撞/查询/质量/生命周期、constraint row 与 connector、DistanceJoint 配置到 CPU PGS/getForce、公开 GPU 后端与 CPU fallback、FEM volume/surface、PBD particles 及可微/宿主责任。固定源码已公开 CUDA 实现，不能沿用旧版“GPU 一概闭源”的判断；eGPU_COMPATIBLE 也不是应用可打开的万能兼容开关。公式保留量纲、参考点与分支，未将源码可读或 syntax-only 变成运行验收。
+
+下一项建议 E7：先核实 E2–E6 实际合入，再完成 A0 安装/环境专题及两条路线整体审校，统一剩余事项和 DexLab 原批次证据入口。用户仍延后引擎运行与实验，安装说明也不能自动触发 native build/import/JIT。当前只交付本地提交待主审，不自动开始 E7，不推送或修改远端状态。
