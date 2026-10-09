@@ -1,0 +1,2 @@
+# Candidate engine packages for later API lessons; not a validated environment lock.
+# PhysX C++ SDK: follow docs/installation.md; no Python engine package here.

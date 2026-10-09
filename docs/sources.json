@@ -1,0 +1,55 @@
+{
+  "upstream": "NVIDIA-Omniverse/PhysX",
+  "commit": "da950a3537927784951853c66618036f332ca0ce",
+  "scope": "source study; no simulation experiments or performance claims",
+  "files": [
+    {
+      "path": "README.md",
+      "git_blob": "0d8ace42968b354da1da6ff61e8b8f9900b26e67"
+    },
+    {
+      "path": "physx/include/foundation/PxPhysicsVersion.h",
+      "git_blob": "feefabb76b5e5ad9744b9d61c41dd115b25e041c"
+    },
+    {
+      "path": "physx/include/PxSceneDesc.h",
+      "git_blob": "58dd3f81af236fc111aab3ac17bf199eec2997af"
+    },
+    {
+      "path": "physx/include/PxScene.h",
+      "git_blob": "d4d2e27111c1e12afa1ba230696aa47b1e0648ec"
+    },
+    {
+      "path": "physx/include/PxRigidBody.h",
+      "git_blob": "7242bd83296cb8b6d9fe19eb2ee6586c7d00e4c9"
+    },
+    {
+      "path": "physx/include/PxRigidDynamic.h",
+      "git_blob": "c0595908e41be7e7fe389b1e4bddc71e1876ebb4"
+    },
+    {
+      "path": "physx/include/PxArticulationReducedCoordinate.h",
+      "git_blob": "7789611d6fa9cd1d14841abddef6a5209e832142"
+    },
+    {
+      "path": "physx/source/physx/src/NpScene.cpp",
+      "git_blob": "5298098f643ac16815086d76be44cfc58d9e8060"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DyDynamics.cpp",
+      "git_blob": "b4e78af263414fbbeda979022e5bfca74555b47f"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DyTGSDynamics.cpp",
+      "git_blob": "508c064e0b40f1c404687d113970613ce6956db8"
+    },
+    {
+      "path": "physx/snippets/snippethelloworld/SnippetHelloWorld.cpp",
+      "git_blob": "c8e841eead765f2d306b66736cd335ab96d2a40e"
+    },
+    {
+      "path": "physx/documentation/fetchcontent/FetchContent.md",
+      "git_blob": "0856feef21ca3e1492c5eb49c7925a00f58f8a5b"
+    }
+  ]
+}
