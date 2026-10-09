@@ -137,3 +137,35 @@
 | [physx/source/physx/src/NpScene.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/NpScene.h) | scene 持有的 render/query/acceleration 数据与内部辅助入口 |
 | [physx/include/PxSceneLock.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxSceneLock.h) | 原生 scene read/write RAII，不代替物理完成事件 |
 | [physx/source/physx/src/NpDebugViz.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/NpDebugViz.cpp) | 清空并重建对象调试图元的实际阶段 |
+
+## E5 增补阅读入口
+
+[批量、学习接口与数据](batch-learning-data.md)继续复用 E1–E4 的 Scene/cache/filter/材料源码；下列固定文件身份均收录 [sources.json](sources.json)。这里只证明来源与本章接口解释，不代表 GPU/序列化/学习宿主已经运行。
+
+| 源码文件 | 阅读目的 |
+|---|---|
+| [physx/include/PxDirectGPUAPI.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxDirectGPUAPI.h) | Direct GPU 初始化/禁用 CPU readback、typed fields、scene-wide batch stride 和 CUDA events |
+| [physx/include/cudamanager/PxCudaContextManager.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/cudamanager/PxCudaContextManager.h) | CUDA context 获取/释放、driver API 边界、旧 helper deprecation |
+| [physx/include/extensions/PxDefaultCpuDispatcher.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/extensions/PxDefaultCpuDispatcher.h) | worker 数量、零 worker 语义与等待模式 |
+| [physx/include/common/PxCollection.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/common/PxCollection.h) | 对象集合、ID 与容器 release 的所有权 |
+| [physx/include/common/PxSerializer.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/common/PxSerializer.h) | 自定义对象类型 serializer 契约与对象图依赖入口 |
+| [physx/include/extensions/PxExtensionsAPI.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/extensions/PxExtensionsAPI.h) | 原生 extensions 初始化/关闭与库边界 |
+| [physx/include/task/PxCpuDispatcher.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/task/PxCpuDispatcher.h) | SDK CPU task 的 submit/run/release 与 worker 计数契约 |
+| [physx/include/task/PxTask.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/task/PxTask.h) | task run 的不可阻塞/线程安全要求与 continuation/reference 生命周期 |
+| [physx/include/task/PxTaskManager.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/task/PxTaskManager.h) | SDK task 调度与 start/stopSimulation 管理入口 |
+| [physx/snippets/snippetdirectgpuapiarticulation/SnippetDirectGPUAPIArticulation.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/snippets/snippetdirectgpuapiarticulation/SnippetDirectGPUAPIArticulation.cpp) | 首个物理步初始化、low-level link index、GPU typed 读写；只阅读 |
+| [physx/snippets/snippetrbdirectgpuapi/SnippetRBDirectGPUAPI.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/snippets/snippetrbdirectgpuapi/SnippetRBDirectGPUAPI.cpp) | 原生刚体 GPU buffer/索引和数据交换应用示例；不执行 |
+| [physx/snippets/snippetmultithreading/SnippetMultiThreading.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/snippets/snippetmultithreading/SnippetMultiThreading.cpp) | simulate/fetch 之间的 query worker 交叠与应用等待 |
+| [physx/snippets/snippetsplitsim/SnippetSplitSim.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/snippets/snippetsplitsim/SnippetSplitSim.cpp) | collide/fetchCollision/advance/fetchResults 分阶段时序 |
+| [physx/snippets/snippetserialization/SnippetSerialization.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/snippets/snippetserialization/SnippetSerialization.cpp) | 共享资产/实例 collection、128-byte backing allocation 与最终释放 |
+| [physx/source/physx/src/NpDirectGPUAPI.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/NpDirectGPUAPI.cpp) | 合法阶段/初始化/指针检查与 simulation controller 转发 |
+| [physx/source/physxextensions/src/ExtDefaultCpuDispatcher.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physxextensions/src/ExtDefaultCpuDispatcher.cpp) | 零 worker 同步 run/release 与线程队列路径 |
+| [physx/source/physxextensions/src/serialization/Binary/SnBinarySerialization.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physxextensions/src/serialization/Binary/SnBinarySerialization.cpp) | binary header/version/platform 与对象数据序列化实现 |
+| [physx/source/physxextensions/src/serialization/SnSerialization.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physxextensions/src/serialization/SnSerialization.cpp) | 完整对象图和可序列化条件实现 |
+| [physx/include/PxAggregate.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxAggregate.h) | broad-phase 聚合与自碰撞，区别于环境隔离 |
+| [physx/include/common/PxSerialFramework.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/common/PxSerialFramework.h) | serialization registry 的类型注册/反注册与生命周期 |
+| [physx/include/extensions/PxCollectionExt.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/extensions/PxCollectionExt.h) | 实际 createCollection API、可共享对象与 releaseObjects 引用前提 |
+| [physx/include/extensions/PxCudaHelpersExt.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/extensions/PxCudaHelpersExt.h) | 替代旧 context helper 的分配/拷贝扩展、context 锁与错误处理 |
+| [physx/source/physxextensions/src/serialization/Binary/SnBinaryDeserialization.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physxextensions/src/serialization/Binary/SnBinaryDeserialization.cpp) | header/GUID/platform 检查与提供内存内的对象构造 |
+
+补充职责来源：[Isaac Lab 官方任务工作流](https://isaac-sim.github.io/IsaacLab/main/source/overview/core-concepts/task_workflows.html)。该可变页面于 2026-10-09 查阅，只用于说明 RL 环境类属于宿主；不是固定 SDK 身份、版本兼容或运行证据。

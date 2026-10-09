@@ -414,6 +414,105 @@
     {
       "path": "physx/source/physx/src/NpDebugViz.cpp",
       "git_blob": "39970f7d220e20533fb6c35ec46c4696edfbffb4"
+    },
+    {
+      "path": "physx/include/PxDirectGPUAPI.h",
+      "git_blob": "21002fa4221dd85ec32a6a8e1a5133795b041783"
+    },
+    {
+      "path": "physx/include/cudamanager/PxCudaContextManager.h",
+      "git_blob": "ad49a773d5d06e86781b7d9cc181d198f5e66ec4"
+    },
+    {
+      "path": "physx/include/extensions/PxDefaultCpuDispatcher.h",
+      "git_blob": "e821c8a3a79f5e4f171b97fc68d9b99fccea2046"
+    },
+    {
+      "path": "physx/include/common/PxCollection.h",
+      "git_blob": "0595582aea3419c8a3c1c51a7951c9defd664c19"
+    },
+    {
+      "path": "physx/include/common/PxSerializer.h",
+      "git_blob": "a24e74c2df3529309785f583c24b11b914e68c59"
+    },
+    {
+      "path": "physx/include/extensions/PxExtensionsAPI.h",
+      "git_blob": "920eee1b775080f95ee4ef847afe53b3d2034b2c"
+    },
+    {
+      "path": "physx/include/task/PxCpuDispatcher.h",
+      "git_blob": "4254fa2b82238b4cdab0fdbae1978096aa2c20c7"
+    },
+    {
+      "path": "physx/include/task/PxTask.h",
+      "git_blob": "74d6a18bc89bfa9d8a394b7d7436458eac5ddd75"
+    },
+    {
+      "path": "physx/include/task/PxTaskManager.h",
+      "git_blob": "b60fe5264db3eb7b987424ba23b909ac0090a653"
+    },
+    {
+      "path": "physx/snippets/snippetdirectgpuapiarticulation/SnippetDirectGPUAPIArticulation.cpp",
+      "git_blob": "681e7ab5ce6e41c7b6d7d0c36b95fa18395d3459"
+    },
+    {
+      "path": "physx/snippets/snippetrbdirectgpuapi/SnippetRBDirectGPUAPI.cpp",
+      "git_blob": "99e8fc607332a52edf091d34f1b1468b9210a80e"
+    },
+    {
+      "path": "physx/snippets/snippetmultithreading/SnippetMultiThreading.cpp",
+      "git_blob": "ac76fec4bd737fce03197442f712c190ca26f2fe"
+    },
+    {
+      "path": "physx/snippets/snippetsplitsim/SnippetSplitSim.cpp",
+      "git_blob": "8e8d41ede240bad0d3d75a66f08333e3c54b9cde"
+    },
+    {
+      "path": "physx/snippets/snippetserialization/SnippetSerialization.cpp",
+      "git_blob": "df60862374179bae63739177193336583309fd90"
+    },
+    {
+      "path": "physx/source/physx/src/NpDirectGPUAPI.cpp",
+      "git_blob": "f5667b772fdf4546a26fe71a90ead0ad9d33ebdd"
+    },
+    {
+      "path": "physx/source/physxextensions/src/ExtDefaultCpuDispatcher.cpp",
+      "git_blob": "d67431301f94f2791e61232939e467ca03ce5fcb"
+    },
+    {
+      "path": "physx/source/physxextensions/src/serialization/Binary/SnBinarySerialization.cpp",
+      "git_blob": "31c7c9bcfdcdedffd10c70cb2c0b6499ada2aaba"
+    },
+    {
+      "path": "physx/source/physxextensions/src/serialization/SnSerialization.cpp",
+      "git_blob": "8cb86e7baa863296917fcaad18fca8227f237775"
+    },
+    {
+      "path": "physx/include/PxAggregate.h",
+      "git_blob": "9a4c72b872b69b8e491617bc9bfa0c459ce27abb"
+    },
+    {
+      "path": "physx/include/common/PxSerialFramework.h",
+      "git_blob": "dc8ddbf62246e75bc00daac9e3701394dc05bff9"
+    },
+    {
+      "path": "physx/include/extensions/PxCollectionExt.h",
+      "git_blob": "579c0dca9aa1723d22b74cc0cd2fa6bb9ac63834"
+    },
+    {
+      "path": "physx/include/extensions/PxCudaHelpersExt.h",
+      "git_blob": "93cce4c221a17ec4c84f878c1e4ab31b2bbe43f7"
+    },
+    {
+      "path": "physx/source/physxextensions/src/serialization/Binary/SnBinaryDeserialization.cpp",
+      "git_blob": "891dacd641b6258d19898ab2f9f64116a367165a"
+    }
+  ],
+  "external_references": [
+    {
+      "url": "https://isaac-sim.github.io/IsaacLab/main/source/overview/core-concepts/task_workflows.html",
+      "accessed": "2026-10-09",
+      "scope": "Official mutable documentation; RL host responsibility only, not fixed SDK identity, version compatibility or runtime evidence."
     }
   ]
 }

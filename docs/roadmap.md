@@ -9,7 +9,7 @@
 | E2 | 驱动、机器人与任务接口专题 | E1 | [源码课程已交付](control-robotics.md)，[检查与限制](validation/e2.md) |
 | E3 | 接触、求解器与力观测源码专题 | E1 | [源码课程已交付](contact-solvers.md)，[检查与限制](validation/e3.md) |
 | E4 | 传感器、渲染与可视化专题 | E1 | [源码课程已交付](sensors-rendering.md)，[检查与限制](validation/e4.md) |
-| E5 | 批量、学习接口与数据专题 | E2、E4 | 待开发 |
+| E5 | 批量、学习接口与数据专题 | E2、E4 | [源码课程已交付](batch-learning-data.md)，[检查与限制](validation/e5.md) |
 | E6 | 引擎特色、扩展与能力边界专题 | E3 | 待开发 |
 | E7 | 双路线课程审校与 DexLab 复用入口 | E2–E6 | 待开发 |
 
@@ -42,3 +42,9 @@ E3 贯通 A4/B1–B5 的原生过滤、材料组合、CPU PGS/TGS 准备/求解/
 E4 完成 A6：raycast/sweep/overlap 的筛选、最近/任意与截断、query 索引更新/线程边界，关节传力/加速度的 frame 和有效性，几何 range 与光学 depth，以及 debug buffer、PVD/OmniPVD 和实际图像管线的责任。原生加速度 getter 的零值、cache 跳过滤、调试图元分阶段生成都不能无条件当作传感测量；章节与示例保留这些边界。
 
 E2/E4 均实际合入后，下一项可领取 E5 批量、学习接口与数据：沿已定义的控制/观测/时钟契约，解释 reset、终止/截断、批量所有权和数据导出。E6 可独立继续 GPU/后端/扩展，E7 再统一审校与 DexLab 复用。领取前仍重新查 main、Issue/PR 和依赖；本记录不自动启动下一阶段。未运行传感器、renderer、GUI/headless 或新实验。
+
+## E5 复盘与下一步
+
+E5 贯通 A8/A9 与 B6 的调度/数据/扩展入口：独立 Scene 与同 Scene 批量的四类隔离、任务和完成边界、Direct GPU 的首步初始化/事件/scene-wide stride、CPU/GPU reset、随机化/确定性、学习宿主职责和记录/序列化/回放。特别保留了 GPU 读回 joint force 为输入值、UPDATE_KINEMATIC 清观测输出，以及容器 release 不释放反序列化对象/backing memory 的边界。
+
+下一项建议 E6：在已实际合入的 E3 基础上解释 GPU 内核/后端、特色几何与自定义扩展的实现和能力限制，不把 E5 数据接口存在当作全后端运行证明。E7 再统一课程与 DexLab 证据入口。领取前仍核实 main、Issue/PR 和依赖；本记录不自动开始下一项。没有新训练、物理实验、性能数字或 sim-to-real 验收。
