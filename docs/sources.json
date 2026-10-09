@@ -234,6 +234,90 @@
     {
       "path": "physx/source/lowleveldynamics/shared/DyCpuGpuArticulation.h",
       "git_blob": "3b2100c30bdff6c3ca7c097b1bec26a9297edad8"
+    },
+    {
+      "path": "physx/include/PxMaterial.h",
+      "git_blob": "2125e53cb39a11827eaa906d6a7ef2d38ccfd323"
+    },
+    {
+      "path": "physx/include/PxFiltering.h",
+      "git_blob": "b8ffba2bfa3b43d60cca469266eca8de8900857f"
+    },
+    {
+      "path": "physx/include/PxContact.h",
+      "git_blob": "dd8248c29add74b7f79d123d055615751eedbc1c"
+    },
+    {
+      "path": "physx/include/PxContactModifyCallback.h",
+      "git_blob": "189f6905d020003d429c92a0e5c4eaeee279135b"
+    },
+    {
+      "path": "physx/source/lowlevel/software/include/PxsMaterialCombiner.h",
+      "git_blob": "cf431dbd872570bcc33833f4e9cf33ae117a62dd"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DyBodyCoreIntegrator.h",
+      "git_blob": "a5a692ea56ddcf2022d7b3ff00d2979db0623dfd"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DyContactPrep.cpp",
+      "git_blob": "0fe06ce0014ebdd1f28f351dc432cba8f092d0e5"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DyContactPrepShared.h",
+      "git_blob": "33e7c474db4bf9b98a99690d3f318c32e1e604ce"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DyTGSContactPrep.cpp",
+      "git_blob": "26ac3f2a8e0f030eb94f69dbc2f1249aa3257797"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DySolverConstraints.cpp",
+      "git_blob": "238df50be3069bd145e693ce0cf321c8b6574951"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DySolverControl.cpp",
+      "git_blob": "92f5f47129cb64b1b12296c407710d093cf57aee"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DyCorrelationBuffer.h",
+      "git_blob": "7f7fa34b2b191737f47b2e5260049c70f585edef"
+    },
+    {
+      "path": "physx/source/lowlevel/common/src/pipeline/PxcNpContactPrepShared.cpp",
+      "git_blob": "6e9bce420e74c8a3164ed3af1d3d64d245784d81"
+    },
+    {
+      "path": "physx/source/simulationcontroller/src/ScScene.cpp",
+      "git_blob": "790f3e295bd003d80162c5a18edf3da1db5e6dd0"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DySolverConstraintsShared.h",
+      "git_blob": "f996a1f3a06464ee4bbf0d432fefdc203ea5fa40"
+    },
+    {
+      "path": "physx/source/simulationcontroller/src/ScShapeInteraction.cpp",
+      "git_blob": "f9246ecac2ebda61aa28fb29303d51f633413b97"
+    },
+    {
+      "path": "physx/source/physx/src/NpConstraint.cpp",
+      "git_blob": "90dd637308102c8fb4e641c4ae88dc81f8aaf637"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DyArticulationContactPrep.cpp",
+      "git_blob": "45bc55a39c4625da15efc33a6f773fb5f2c6c4a3"
+    },
+    {
+      "path": "physx/source/simulationcontroller/src/ScConstraintCore.cpp",
+      "git_blob": "e3d6a2ea161e77ccc642aaa994520ff5b2be6149"
+    },
+    {
+      "path": "physx/source/lowlevel/software/src/PxsNphaseImplementationContext.cpp",
+      "git_blob": "4d4954d88f96fcfa8860e91ac599ba8eb446397b"
+    },
+    {
+      "path": "physx/source/simulationcontroller/src/ScPipeline.cpp",
+      "git_blob": "68aa23b2c5630b3b557b8e2d8bb336f1d188aff8"
     }
   ]
 }
