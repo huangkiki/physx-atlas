@@ -158,6 +158,82 @@
     {
       "path": "physx/source/physx/src/NpShapeManager.cpp",
       "git_blob": "def55a4226834db2852c8b3ce13606d0efa81087"
+    },
+    {
+      "path": "physx/include/extensions/PxD6Joint.h",
+      "git_blob": "c3ff6f287bcc9fa0ceca3d1ddaf6d8e8cd70002d"
+    },
+    {
+      "path": "physx/include/extensions/PxRevoluteJoint.h",
+      "git_blob": "315bfff0feb93db814653d1ab8a61096ad525d62"
+    },
+    {
+      "path": "physx/include/extensions/PxJoint.h",
+      "git_blob": "faebff9f0227824e0aafe8b3b0d27f4fb3fb7ba6"
+    },
+    {
+      "path": "physx/include/PxConstraint.h",
+      "git_blob": "735726266494d24ddb93e96a63ba4c382856720f"
+    },
+    {
+      "path": "physx/include/PxSimulationEventCallback.h",
+      "git_blob": "dddff026ec013c45498e235bd6a753c0b87b9bb4"
+    },
+    {
+      "path": "physx/source/physx/src/NpArticulationJointReducedCoordinate.cpp",
+      "git_blob": "0e6f3053ba196894daf209bc4f5cb72846243dcb"
+    },
+    {
+      "path": "physx/source/simulationcontroller/src/ScArticulationJointCore.cpp",
+      "git_blob": "b2a768e5649f07a8fee303ae353c7576a2c2e53f"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/include/DyArticulationJointCore.h",
+      "git_blob": "6b04fea7b033a69cfac70be0674e1aa203359e75"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DyFeatherstoneArticulation.cpp",
+      "git_blob": "4585218526413ec8721ab32f5f0ec0ce3fa3bb1f"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/src/DyFeatherstoneForwardDynamic.cpp",
+      "git_blob": "9c64a948c1e7cf7e40169a323c428179535e16ba"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/include/DyFeatherstoneArticulationUtils.h",
+      "git_blob": "7357d962accd0b1c1a8902d19006be2f6acf55cb"
+    },
+    {
+      "path": "physx/source/physxextensions/src/ExtD6Joint.cpp",
+      "git_blob": "a792ecad87f8a935260ff4eac0d089ec911ca374"
+    },
+    {
+      "path": "physx/source/physx/src/NpRigidBodyTemplate.h",
+      "git_blob": "20f6c817cb9dc16af00b82a3e0881be06e446003"
+    },
+    {
+      "path": "physx/source/simulationcontroller/src/ScBodyCore.cpp",
+      "git_blob": "40ea7f037a269b800fca8634949cd30a034bc026"
+    },
+    {
+      "path": "physx/snippets/snippetarticulationrc/SnippetArticulation.cpp",
+      "git_blob": "2e08ac38edb0cea7dfa4cf8387a3b12b4e485258"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/include/DyFeatherstoneArticulation.h",
+      "git_blob": "fe52307f65f0dfa5c82e2a84c84e1ffe3faa85ca"
+    },
+    {
+      "path": "physx/source/physx/src/NpArticulationJointReducedCoordinate.h",
+      "git_blob": "1c905bb3ab78251dae10cbbf83f10bfe26c5932f"
+    },
+    {
+      "path": "physx/include/PxArticulationMimicJoint.h",
+      "git_blob": "3393952ea3727c02a9f97ba2725f8b97d84c0b4d"
+    },
+    {
+      "path": "physx/source/lowleveldynamics/shared/DyCpuGpuArticulation.h",
+      "git_blob": "3b2100c30bdff6c3ca7c097b1bec26a9297edad8"
     }
   ]
 }

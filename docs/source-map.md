@@ -52,3 +52,29 @@
 | [physx/source/physx/src/NpShape.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/NpShape.cpp) | Shape 标志修改限制与 SDF 材料分支 |
 | [physx/source/physx/src/NpShapeManager.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/NpShapeManager.cpp) | 实际附着与重复 Shape 检查 |
 | [physx/snippets/snippetsdf/SnippetSDF.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/snippets/snippetsdf/SnippetSDF.cpp) | SDF triangle mesh 动态 Actor、cooking 与 CPU/GPU 示例分支（未运行） |
+
+## E2 增补阅读入口
+
+[控制、机器人与任务接口](control-robotics.md)按 setter、数据映射、驱动参数准备与冲量限幅追踪。下列固定文件已做身份核对与对应段落阅读，不代表整个文件或引擎已全面审查。
+
+| 源码文件 | 阅读目的 |
+|---|---|
+| [physx/include/extensions/PxD6Joint.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/extensions/PxD6Joint.h) | D6 隐式 drive、angular model、相对目标与 forceLimit |
+| [physx/include/extensions/PxRevoluteJoint.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/extensions/PxRevoluteJoint.h) | extension revolute velocity motor 与 drive flag |
+| [physx/include/extensions/PxJoint.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/extensions/PxJoint.h) | extension joint/constraint 的公共接口边界 |
+| [physx/include/PxConstraint.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxConstraint.h) | constraint drive force/impulse flag 与版本迁移标记 |
+| [physx/include/PxSimulationEventCallback.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxSimulationEventCallback.h) | onContact/onAdvance 的阶段、写入与线程契约 |
+| [physx/source/physx/src/NpArticulationJointReducedCoordinate.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/NpArticulationJointReducedCoordinate.cpp) | drive target/velocity/params 的实际入口检查与转发 |
+| [physx/source/simulationcontroller/src/ScArticulationJointCore.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/simulationcontroller/src/ScArticulationJointCore.cpp) | 关节轴到有效 DOF target 数组映射、dirty 更新 |
+| [physx/source/lowleveldynamics/include/DyArticulationJointCore.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/lowleveldynamics/include/DyArticulationJointCore.h) | drive、target、joint frame 在低层 core 的存储 |
+| [physx/source/lowleveldynamics/src/DyFeatherstoneArticulation.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/lowleveldynamics/src/DyFeatherstoneArticulation.cpp) | 构造 drive、上限缩放/限幅与 dense Jacobian 布局 |
+| [physx/source/lowleveldynamics/src/DyFeatherstoneForwardDynamic.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/lowleveldynamics/src/DyFeatherstoneForwardDynamic.cpp) | articulation 动力学接口衔接；完整步进待 E3 |
+| [physx/source/lowleveldynamics/include/DyFeatherstoneArticulationUtils.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/lowleveldynamics/include/DyFeatherstoneArticulationUtils.h) | 低层空间量/关节工具入口；完整数值展开待 E3 |
+| [physx/source/physxextensions/src/ExtD6Joint.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physxextensions/src/ExtD6Joint.cpp) | D6 参数保存、相对 joint frame 误差与 drive row |
+| [physx/source/physx/src/NpRigidBodyTemplate.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/NpRigidBodyTemplate.h) | 四种 force mode 的逆质量/逆惯量和累加器分支 |
+| [physx/source/simulationcontroller/src/ScBodyCore.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/simulationcontroller/src/ScBodyCore.cpp) | Body core 与 simulation 状态接口的衔接 |
+| [physx/snippets/snippetarticulationrc/SnippetArticulation.cpp](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/snippets/snippetarticulationrc/SnippetArticulation.cpp) | 原生 robot link/joint frame、额外 D6 约束与目标提交（未运行） |
+| [physx/source/lowleveldynamics/include/DyFeatherstoneArticulation.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/lowleveldynamics/include/DyFeatherstoneArticulation.h) | articulation 与 CPU/GPU 共享驱动数据入口 |
+| [physx/source/physx/src/NpArticulationJointReducedCoordinate.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physx/src/NpArticulationJointReducedCoordinate.h) | scSetDrive/Target/Velocity 向 core 转发 |
+| [physx/include/PxArticulationMimicJoint.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxArticulationMimicJoint.h) | mimic ratio/offset/compliance 的公开入口 |
+| [physx/source/lowleveldynamics/shared/DyCpuGpuArticulation.h](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/lowleveldynamics/shared/DyCpuGpuArticulation.h) | force/acceleration 隐式 drive 公式、冲量计算与 envelope 限幅 |
