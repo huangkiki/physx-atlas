@@ -71,10 +71,10 @@ Cooking 的职责是处理碰撞数据，不是自动理解 URDF link/joint、US
 
 约定 `T_WA` 把 Actor 坐标的点变换到世界，`T_AS` 把 Shape 坐标的点变换到 Actor，`T_AC` 把质心惯性坐标的点变换到 Actor，则：
 
-\[
+$$
  x_W=R_{WA}x_A+p_{WA},\qquad
  T_{WS}=T_{WA}T_{AS},\qquad T_{WC}=T_{WA}T_{AC}.
-\]
+$$
 
 | 数学量 | C++ 原生读取 | 返回语义 |
 |---|---|---|
@@ -94,16 +94,16 @@ Cooking 的职责是处理碰撞数据，不是自动理解 URDF link/joint、US
 
 SDK 存 `getMassSpaceInertiaTensor()` 的三个对角值 `I_x,I_y,I_z`，它们定义在以质心为原点、按惯性主轴定向的质量坐标中。若从 CAD 得到 Actor 坐标下、关于质心的完整惯量矩阵，应先检查对称性、物理合理性和单位，再对角化：
 
-\[
+$$
  I_C^{(A)}=R_{AC}\,\operatorname{diag}(I_x,I_y,I_z)R_{AC}^{T},\qquad
  I_C^{(W)}=R_{WC}\,\operatorname{diag}(I_x,I_y,I_z)R_{WC}^{T}.
-\]
+$$
 
 `R_AC` 的朝向放到 `setCMassLocalPose` 的旋转部分，三个特征值放到 `setMassSpaceInertiaTensor`；不能直接丢弃非对角元素。若输入惯量是关于 Actor 原点 O，需先用平行轴定理转换到质心 C，且全部在同一坐标系表示：
 
-\[
+$$
  I_O=I_C+m\big((r^Tr)\mathbf{1}-rr^T\big),\quad r=p_C-p_O.
-\]
+$$
 
 这两式是刚体质量几何的关系，不是 PhysX 接触求解器方程。本章假设普通有限质量刚体；API 中质量 0 对 `PxRigidDynamic` 表示无限质量，惯量某项 0 表示该轴无限惯量，**不是无质量/自由转动**。`PxArticulationLink` 不允许这些 0 值。[惯量接口特殊值](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxRigidBody.h#L234-L308)。
 
@@ -115,9 +115,9 @@ SDK 存 `getMassSpaceInertiaTensor()` 的三个对角值 `I_x,I_y,I_z`，它们�
 
 线速度 getter 返回质心速度，以世界方向表达；角速度也用于世界方向下的刚体速度关系。对世界点 P：
 
-\[
+$$
  v_P=v_C+\omega\times(p_P-p_C).
-\]
+$$
 
 `PxRigidBodyExt::getVelocityAtPos` 先把质心局部位置变到世界，再用上式求点速度。因此不能用 Actor 原点位置的差分直接检查质心速度，除非原点与质心重合或转动项为零。改了质心局部位姿，SDK 也不会自动调整已经保存的线速度。[getter](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/include/PxRigidBody.h#L378-L402)、[点速度实现](https://github.com/NVIDIA-Omniverse/PhysX/blob/da950a3537927784951853c66618036f332ca0ce/physx/source/physxextensions/src/ExtRigidBodyExt.cpp#L416-L430)。
 
